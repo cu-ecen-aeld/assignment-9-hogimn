@@ -2,6 +2,10 @@
 #Script to build buildroot configuration
 #Author: Siddhant Jajoo
 
+# BR2_DL_DIR allows you to specify a package download directory
+# outside your buildroot tree which is not removed with distclean.
+export BR2_DL_DIR=${HOME}/.dl
+
 source shared.sh
 
 EXTERNAL_REL_BUILDROOT=../base_external
