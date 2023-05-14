@@ -71,3 +71,10 @@ BR2_TARGET_GENERIC_ROOT_PASSWD="root"
 ## Enable the ccache tool for caching build artifacts
 BR2_CCACHE=y
 
+# assignment-7-part-2 specific
+
+## Enable building LDD
+BR2_PACKAGE_LDD=y
+
+## Add custom files, directories, or symbolic links to the root filesystem image.
+BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_project_base_PATH)/rootfs_overlay"
