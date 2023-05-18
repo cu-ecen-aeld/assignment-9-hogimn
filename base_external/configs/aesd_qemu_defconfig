@@ -45,7 +45,7 @@ BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="5.15.18"
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 
 ## Specifies the location of the custom Linux kernel configuration file
-BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="board/qemu/aarch64-virt/linux.config"
+BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="../base_external/configs/linux.config"
 
 ## Require OpenSSL to be installed on the host system for building the Linux kernel
 BR2_LINUX_KERNEL_NEEDS_HOST_OPENSSL=y
@@ -78,3 +78,8 @@ BR2_PACKAGE_LDD=y
 
 ## Add custom files, directories, or symbolic links to the root filesystem image.
 BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_project_base_PATH)/rootfs_overlay"
+
+# assignment-8 specific
+
+## Enable building aesd-char-driver
+BR2_PACKAGE_AESD_CHAR_DRIVER=y

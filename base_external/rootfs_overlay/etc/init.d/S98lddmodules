@@ -12,6 +12,7 @@ case "$1" in
         scull_load
         module_load hello
         module_load faulty
+        aesdchar_load
         ;;
 
     # If the script is called with the "stop" argument, stop the daemon.
@@ -20,6 +21,7 @@ case "$1" in
         echo "Unload drivers"
 
         # Execute the driver unload scripts
+        aesdchar_unload
         module_unload faulty
         module_unload hello
         scull_unload
